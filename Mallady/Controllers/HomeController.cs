@@ -12,8 +12,14 @@ namespace Mallady.Controllers
         {
             _logger = logger;
         }
-
+        
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        [Route("Contact")]
+        public IActionResult Contact()
         {
             return View();
         }
@@ -29,4 +35,5 @@ namespace Mallady.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
+
 }
