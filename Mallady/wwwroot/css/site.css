@@ -1,0 +1,9 @@
+﻿header {
+    background: #F0FBFF;
+    height: 160px;
+    min-height: 80px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    position: fixed;
+}
