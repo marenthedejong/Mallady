@@ -19,6 +19,12 @@ namespace Mallady.Controllers
             return View();
         }
 
+        [Route("Bestelpagina")]
+        public IActionResult Bestelpagina()
+        {
+            return View();
+        }
+
         [Route("Contact")]
         public IActionResult Contact()
         {
