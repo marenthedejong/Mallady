@@ -1,12 +1,20 @@
-﻿@{
-    ViewData["Title"] = "Contact";
-}
+﻿@using Mallady.Database;
+@model List<Product>
 
 <body>
   <div class = 'Titel'>
     <h1>Dit is de bestelpagina!</h1>
   </div>
 
+  <div class = 'Alle pizza'> 
+      <p>Dit zijn al onze pizza's:</p>
+        @foreach (Product p in Model)
+        {
+            <p>@p.Naam</p>
+            <p>@p.Prijs</p>
+        }
+
+    </div>
 </body>
 
 
