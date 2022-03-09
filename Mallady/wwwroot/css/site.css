@@ -75,3 +75,31 @@ footer {
     color: #183052;
 }
 
+.bestelknop {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    
+}
+
+.bestelknop p{
+    margin-top: 15px;
+}
+
+.bestelknop a:link, a:visited {
+        background-color: #FFC67F;
+        color: #183052;
+        padding: 14px 25px;
+        text-decoration: none;
+        display: inline-block;
+        width: 250px;
+        height: 60px;
+        font-size: 25px;
+        margin-top: 150px;
+       
+}
+    
+
+.bestelknop a:hover, a:active {
+    background-color: white;
+}
