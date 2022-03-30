@@ -122,8 +122,9 @@ input[type=checkbox] + label {
 input[type=checkbox]:checked + label {
     color: #f00;
     font-style: normal;
-} 
+}
 
-footer{
-    position: fixed;
+footer {
+    position: absolute;
+    
 }

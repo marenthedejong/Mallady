@@ -10,8 +10,8 @@ namespace Mallady.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        //private readonly string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110374;Uid=110374;Pwd=inf2021sql;";
-        private readonly string connectionString = "Server=172.16.160.21;Port=3306;Database=110374;Uid=110374;Pwd=inf2021sql;";
+        private readonly string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110374;Uid=110374;Pwd=inf2021sql;";
+        //private readonly string connectionString = "Server=172.16.160.21;Port=3306;Database=110374;Uid=110374;Pwd=inf2021sql;";
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -90,7 +90,7 @@ namespace Mallady.Controllers
         {
             if (ModelState.IsValid)
             {
-
+                SavePerson(person);
                 return Redirect("/Success");
             }
             return View(person);
@@ -107,6 +107,24 @@ namespace Mallady.Controllers
         {
             return View();
         }
+
+        private void SavePerson(Person person)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO klant(voornaam, achternaam, wachtwoord, email, telefoon, rekeningnummer, bericht) VALUES(?voornaam, ?achternaam, ?wachtwoord, ?telefoon, ?rekeningnummer, ?email, ?bericht)", conn);
+                cmd.Parameters.Add("?voornaam", MySqlDbType.Text).Value = person.Voornaam;
+                cmd.Parameters.Add("?achternaam", MySqlDbType.Text).Value = person.Achternaam;
+                cmd.Parameters.Add("?wachtwoord", MySqlDbType.Text).Value = person.Wachtwoord;
+                cmd.Parameters.Add("?email", MySqlDbType.Text).Value = person.Email;
+                cmd.Parameters.Add("?telefoon", MySqlDbType.Int32).Value = person.Telefoon;
+                cmd.Parameters.Add("?rekeningnummer", MySqlDbType.Int32).Value = person.Rekeningnummer;
+                cmd.Parameters.Add("?bericht", MySqlDbType.Text).Value = person.Bericht;
+                cmd.ExecuteNonQuery();
+            }
+        }
+
 
         public IActionResult Privacy()
         {

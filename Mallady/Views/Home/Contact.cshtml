@@ -6,7 +6,7 @@
 }
 
 @section style{
-     <link rel = "stylesheet" href = "~/css/contact.css" />
+     <link rel = "stylesheet" href = "~/css/Contact.css" />
 }
 
 
@@ -21,26 +21,30 @@
     <form method="post" class="row input-container">
         <div class="col-xs-12">
             <div class="styled-input wide">
-                <input placeholder="Voornaam" type="text" name="FirstName" />
+                <input placeholder="Voornaam" type="text" name="Voornaam" />
+                 @Html.ValidationMessageFor(m => m.Voornaam)
             </div>
         </div>
 
         <div class="col-md-6 col-sm-12">
             <div class="styled-input">
-                <input placeholder="Achternaam" type="text" name="LastName" />
+                <input placeholder="Achternaam" type="text" name="Achternaam" />
+                @Html.ValidationMessageFor(m => m.Achternaam)
             </div>
         </div>
 
         <div class="col-md-6 col-sm-12">
             <div class="styled-input" style="float:right;">
                 <input placeholder="Email" type="text" name="Email" />
+                @Html.ValidationMessageFor(m => m.Email)
             </div>
         </div>
 
 
         <div class="col-xs-12">
             <div class="styled-input wide">
-                <input placeholder="Bericht" type="text" name="Description" />
+                <input placeholder="Bericht" type="text" name="Bericht" />
+                 @Html.ValidationMessageFor(m => m.Bericht)
             </div>
         </div>
 
@@ -50,7 +54,9 @@
     </form>
 </div>
 
-@if (Model != null){
-    <a href="/success"></a>
-    <p>Dank voor uw bericht @Model.Voornaam @Model.Achternaam </p>
+
+@if (Model !=null){
+
+   <a href="/Succes"></a>
+   <p>Dank voor uw bericht @Model.Voornaam @Model.Achternaam </p>
 }
