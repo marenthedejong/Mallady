@@ -89,9 +89,10 @@ namespace Mallady.Controllers
         public IActionResult Contact(Person person)
         {
             if (ModelState.IsValid)
-        
-                return Redirect("/Success");
+            {
 
+                return Redirect("/Success");
+            }
             return View(person);
         }
 
