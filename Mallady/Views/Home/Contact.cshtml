@@ -1,4 +1,7 @@
-﻿@{
+﻿@using Mallady.Database;
+@model Person
+
+@{
     ViewData["Title"] = "Contact";
 }
 
@@ -45,3 +48,8 @@
         </div>
     </form>
 </div>
+
+@if (Model != null){
+    <a href="/success"></a>
+    <p>Dank voor uw bericht@Model.Voornaam @Model.Achternaam </p>
+}

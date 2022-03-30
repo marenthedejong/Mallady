@@ -83,8 +83,21 @@ namespace Mallady.Controllers
             return View();
         }
 
+        [HttpPost]
+
         [Route("Contact")]
-        public IActionResult Contact()
+        public IActionResult Contact(Person person)
+        {
+            if (ModelState.IsValid)
+        
+                return Redirect("/Success");
+
+            return View(person);
+        }
+
+
+        [Route("Success")]
+        public IActionResult Success()
         {
             return View();
         }
