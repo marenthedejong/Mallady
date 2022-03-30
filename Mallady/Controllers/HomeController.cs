@@ -51,6 +51,7 @@ namespace Mallady.Controllers
                             Naam = reader["naam"].ToString(),
                             Ingredienten = reader["ingredienten"].ToString(),
                             Prijs = Convert.ToInt32(reader["prijs"]),
+                            Img = reader["foto"].ToString(),
                         };
 
                     // voeg de naam toe aan de lijst met namen

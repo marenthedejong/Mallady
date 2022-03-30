@@ -96,7 +96,7 @@ footer {
         width: 250px;
         height: 60px;
         font-size: 25px;
-        margin-top: 100px;
+        margin-top: 5px;
 }
     
 
@@ -104,6 +104,7 @@ footer {
     background-color: white;
 }
 
-.Homepage_img{
+.Homepage_img {
     margin-bottom: 0;
+    text-align: center;
 }
