@@ -6,6 +6,8 @@
             public string Naam { get; set; }
             public string Ingredienten { get; set; }
             public int Prijs { get; set; }
+
+            public string Img { get; set; }
         }
     }
 
