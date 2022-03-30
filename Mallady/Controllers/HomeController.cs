@@ -85,7 +85,6 @@ namespace Mallady.Controllers
         }
 
         [HttpPost]
-
         [Route("Contact")]
         public IActionResult Contact(Person person)
         {
@@ -96,6 +95,11 @@ namespace Mallady.Controllers
             return View(person);
         }
 
+        [Route("Contact")]
+        public IActionResult Contact()
+        {
+            return View();
+        }
 
         [Route("Success")]
         public IActionResult Success()
