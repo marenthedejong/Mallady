@@ -14,8 +14,9 @@
 
         @foreach (Product p in Model)
         {
-            <div class = 'producten'> 
-               <p>@p.Naam : €@p.Prijs : @p.Img</p>
+            <div class = 'producten'>
+               <img src="@p.Img"/>
+               <p>@p.Naam : €@p.Prijs</p>
             </div>
         }
     
