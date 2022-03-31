@@ -23,46 +23,49 @@ namespace Mallady.Controllers
             return View();
         }
         
-        public List<Product> GetProducts()
-        {
+      
+
+             public List<Product> GetProducts()
+              {
            
-            // maak een lege lijst waar we de namen in gaan opslaan
-            List<Product> products = new List<Product>();
+                // maak een lege lijst waar we de namen in gaan opslaan
+                List<Product> products = new List<Product>();
 
-            // verbinding maken met de database
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
-            {
-                // verbinding openen
-                conn.Open();
-
-                // SQL query die we willen uitvoeren
-                MySqlCommand cmd = new MySqlCommand("select * from product", conn);
-
-                // resultaat van de query lezen
-                using (var reader = cmd.ExecuteReader())
+                // verbinding maken met de database
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
-                    // elke keer een regel (of eigenlijk: database rij) lezen
-                    while (reader.Read())
-                    { 
-                        Product p = new Product
-                        {
-                            // selecteer de kolommen die je wil lezen. In dit geval kiezen we de kolom "naam"
-                            Id = Convert.ToInt32(reader["Id"]),
-                            Naam = reader["naam"].ToString(),
-                            Ingredienten = reader["ingredienten"].ToString(),
-                            Prijs = Convert.ToInt32(reader["prijs"]),
-                            Img = reader["foto"].ToString(),
-                        };
+                    // verbinding openen
+                    conn.Open();
 
-                    // voeg de naam toe aan de lijst met namen
-                    products.Add(p);
+                    // SQL query die we willen uitvoeren
+                    MySqlCommand cmd = new MySqlCommand("select * from product", conn);
+
+                    // resultaat van de query lezen
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        // elke keer een regel (of eigenlijk: database rij) lezen
+                        while (reader.Read())
+                        { 
+                            Product p = new Product
+                            {
+                                // selecteer de kolommen die je wil lezen. In dit geval kiezen we de kolom "naam"
+                                id = Convert.ToInt32(reader["Id"]),
+                                Naam = reader["naam"].ToString(),
+                                Ingredienten = reader["ingredienten"].ToString(),
+                                Prijs = Convert.ToInt32(reader["prijs"]),
+                                Img = reader["foto"].ToString(),
+                            };
+
+                        // voeg de naam toe aan de lijst met namen
+                        products.Add(p);
+                    }
                 }
-            }
-         }
+              }
 
-         // return de lijst met namen
-         return products;
-        }
+              // return de lijst met namen
+               return products;
+             }
+        
 
 
         [Route("Bestelpagina")]
@@ -77,6 +80,49 @@ namespace Mallady.Controllers
         {
             return View();
         }
+
+        [Route("Product/{id}")]
+        public IActionResult Product(string id)
+        {
+            var product = GetProduct(id);
+            return View();
+        }
+
+        private Product GetProduct(string id)
+        {
+            
+            List<Product> products = new List<Product>();
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("select * from product where id = {id}", conn);
+                using (var reader = cmd.ExecuteReader()) 
+                {
+                    while (reader.Read())
+                    {
+                        Product p = new Product
+                        {
+                            // selecteer de kolommen die je wil lezen. In dit geval kiezen we de kolom "naam"
+                            id = Convert.ToInt32(reader["Id"]),
+                            Naam = reader["naam"].ToString(),
+                            Ingredienten = reader["ingredienten"].ToString(),
+                            Prijs = Convert.ToInt32(reader["prijs"]),
+                            Img = reader["foto"].ToString(),
+                        };
+
+                        // voeg de naam toe aan de lijst met namen
+                        products.Add(p);
+                    }
+                }
+
+            }
+
+            return products[0];
+        }
+
+
+
 
         [Route("Vestigingen")]
         public IActionResult Vestigingen()
