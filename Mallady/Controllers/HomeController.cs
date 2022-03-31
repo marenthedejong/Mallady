@@ -85,6 +85,9 @@ namespace Mallady.Controllers
         public IActionResult Product(string id)
         {
             var product = GetProduct(id);
+
+            ViewData["products"] = GetProduct(id);
+
             return View();
         }
 
