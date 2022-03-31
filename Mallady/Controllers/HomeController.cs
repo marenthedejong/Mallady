@@ -91,9 +91,10 @@ namespace Mallady.Controllers
             if (ModelState.IsValid)
             {
                 SavePerson(person);
-                return Redirect("/Success");
+                return Redirect("/Succes");
             }
-            return View(person);
+          
+           return View(person);
         }
 
         [Route("Contact")]
@@ -102,8 +103,8 @@ namespace Mallady.Controllers
             return View();
         }
 
-        [Route("Success")]
-        public IActionResult Success()
+        [Route("Succes")]
+        public IActionResult Succes()
         {
             return View();
         }
@@ -114,6 +115,7 @@ namespace Mallady.Controllers
             {
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand("INSERT INTO klant(voornaam, achternaam, wachtwoord, email, telefoon, rekeningnummer, bericht) VALUES(?voornaam, ?achternaam, ?wachtwoord, ?telefoon, ?rekeningnummer, ?email, ?bericht)", conn);
+                
                 cmd.Parameters.Add("?voornaam", MySqlDbType.Text).Value = person.Voornaam;
                 cmd.Parameters.Add("?achternaam", MySqlDbType.Text).Value = person.Achternaam;
                 cmd.Parameters.Add("?wachtwoord", MySqlDbType.Text).Value = person.Wachtwoord;
