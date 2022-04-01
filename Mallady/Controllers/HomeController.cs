@@ -1,8 +1,9 @@
-﻿using Mallady.Models;
+﻿using Mallady.Database;
+using Mallady.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using MySql.Data.MySqlClient;
-using Mallady.Database;
+
 
 namespace Mallady.Controllers
 {
@@ -84,17 +85,17 @@ namespace Mallady.Controllers
         [Route("Product/{id}")]
         public IActionResult Product(string id)
         {
-            var product = GetProduct(id);
+            var model = GetProduct(id);
 
-            ViewData["products"] = GetProduct(id);
+            ViewData["product"] = GetProduct(id);
 
-            return View();
+            return View(model);
         }
 
         private Product GetProduct(string id)
         {
             
-            List<Product> products = new List<Product>();
+            List<Product> product = new List<Product>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -115,13 +116,13 @@ namespace Mallady.Controllers
                         };
 
                         // voeg de naam toe aan de lijst met namen
-                        products.Add(p);
+                        product.Add(p);
                     }
                 }
 
             }
 
-            return products[0];
+            return product[0];
         }
 
 
