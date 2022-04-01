@@ -100,7 +100,7 @@ namespace Mallady.Controllers
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("select * from product where id = {id}", conn);
+                MySqlCommand cmd = new MySqlCommand($"select * from product where id = {id}", conn);
                 using (var reader = cmd.ExecuteReader()) 
                 {
                     while (reader.Read())
