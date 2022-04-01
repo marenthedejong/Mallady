@@ -1,17 +1,15 @@
-﻿.Menu_tekst {
+﻿footer{
+    position: fixed;
+}
+
+.Tekst {
     text-align: center;
     color: #183052;
-    
 }
 
-.Menu_tekst h1{
+.Tekst h1{
     font-size: 35px;
 }
-
-.Menu_tekst p{
+.Tekst p{
     font-size: 25px;
-}
-
-footer{
-    position: fixed;
 }

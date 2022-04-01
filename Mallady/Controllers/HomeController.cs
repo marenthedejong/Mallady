@@ -178,6 +178,11 @@ namespace Mallady.Controllers
             }
         }
 
+        [Route("Login")]
+        public IActionResult Login()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {
