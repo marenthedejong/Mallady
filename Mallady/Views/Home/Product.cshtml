@@ -5,10 +5,22 @@
     ViewData["Title"] = "Product";
 }
 
-
 @section style {
     <link rel = "stylesheet" href = "~/css/Product.css" />
 }
 
-<p>@Model.Naam</p>
+<div class ="titeltekst">
+    <H1>@Model.Naam</H1>
+</div>
 
+<div class = "img">
+    <img src="@Model.Img"/>
+</div>
+
+<div class = "info">
+    <p>De ingrediënten zijn: @Model.Ingredienten</p>
+    <br />
+    <p>Prijs: €@Model.Prijs</p>
+    <br />
+    <p>Wees er snel bij! Onze huidige voorraad is namelijk nog maar: @Model.Voorraad</p>
+</div>
