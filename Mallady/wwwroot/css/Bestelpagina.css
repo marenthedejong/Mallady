@@ -1,1 +1,16 @@
-﻿
+﻿.Titel {
+    text-align: center;
+    color: #183052;
+    font-size: 35px;
+}
+
+.tekst1 {
+    text-align: center;
+    color: #183052;
+    font-size: 25px;
+}
+
+.producten p {
+    color: #183052;
+    font-size: 25px;
+}

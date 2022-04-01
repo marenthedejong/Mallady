@@ -1,6 +1,10 @@
 ﻿@using Mallady.Database;
 @model List<Product>
 
+@section style {
+    <link rel = "stylesheet" href = "~/css/Bestelpagina.css" />
+}
+
 <body>
   <div class = 'Titel'>
     <h1>Bestelpagina</h1>
@@ -9,7 +13,7 @@
 
   <div class = 'tekst1'>
       <p>Hier kunt u online ons gehele assortiment bestellen!</p>
-      <p>Dit zijn al onze pizza's:</p>
+      <p>Dit zijn al onze producten:</p>
   </div>
 
         @foreach (Product p in Model)
@@ -21,6 +25,7 @@
             </div>
         }
     
+
 </body>
 
 
