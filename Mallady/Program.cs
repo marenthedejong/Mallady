@@ -10,6 +10,17 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
 }
+
+app.Use(async (context, next) =>
+{
+    await next();
+    if (context.Response.StatusCode == 404)
+    {
+        context.Request.Path = "/notfound";
+        await next();
+    }
+});
+
 app.UseStaticFiles();
 
 app.UseRouting();

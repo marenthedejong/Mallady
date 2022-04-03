@@ -160,6 +160,13 @@ namespace Mallady.Controllers
             return View();
         }
 
+        [Route("notfound")]
+        public IActionResult notfound()
+        {
+            return View();
+        }
+
+
         private void SavePerson(Person person)
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
