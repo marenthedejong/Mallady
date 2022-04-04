@@ -10,17 +10,13 @@ namespace Mallady.Models
         [Required(ErrorMessage = "U bent verplicht uw achternaam in te vullen")]
         public string? Achternaam { get; set; }
 
-        public string? Wachtwoord { get; set; }
-
         [Required(ErrorMessage = "U bent verplicht uw emailadres in te vullen")]
         public string? Email { get; set; }
 
         [Required(ErrorMessage = "U bent verplicht een bericht in te vullen")]
         public string? Bericht { get; set; }
 
-        public int Telefoon { get; set; }
-
-        public int Rekeningnummer { get; set; }
+        
     }
    
  }

@@ -172,14 +172,11 @@ namespace Mallady.Controllers
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO klant(voornaam, achternaam, wachtwoord, email, telefoon, rekeningnummer, bericht) VALUES(?voornaam, ?achternaam, ?wachtwoord, ?telefoon, ?rekeningnummer, ?email, ?bericht)", conn);
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO klant(voornaam, achternaam, email, bericht) VALUES(?voornaam, ?achternaam, ?email, ?bericht)", conn);
                 
                 cmd.Parameters.Add("?voornaam", MySqlDbType.Text).Value = person.Voornaam;
                 cmd.Parameters.Add("?achternaam", MySqlDbType.Text).Value = person.Achternaam;
-                cmd.Parameters.Add("?wachtwoord", MySqlDbType.Text).Value = person.Wachtwoord;
                 cmd.Parameters.Add("?email", MySqlDbType.Text).Value = person.Email;
-                cmd.Parameters.Add("?telefoon", MySqlDbType.Int32).Value = person.Telefoon;
-                cmd.Parameters.Add("?rekeningnummer", MySqlDbType.Int32).Value = person.Rekeningnummer;
                 cmd.Parameters.Add("?bericht", MySqlDbType.Text).Value = person.Bericht;
                 cmd.ExecuteNonQuery();
             }
