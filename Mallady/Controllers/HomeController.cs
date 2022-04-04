@@ -188,6 +188,38 @@ namespace Mallady.Controllers
             return View();
         }
 
+        [HttpPost]
+        [Route("Reserveren")]
+        public IActionResult Reserveren(Reservering reservering)
+        {
+            if (ModelState.IsValid)
+            {
+                SaveReservering(reservering);
+                return Redirect("/Succes");
+            }
+
+            return View(reservering);
+        }
+
+        private void SaveReservering(Reservering reservering)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO reservering(voornaam, achternaam, restaurant_id, personen, datum, tijd) VALUES(?voornaam, ?achternaam, ?restaurant_id, ?personen, ?datum, ?tijd)", conn);
+
+                cmd.Parameters.Add("?voornaam", MySqlDbType.Text).Value = reservering.Voornaam;
+                cmd.Parameters.Add("?achternaam", MySqlDbType.Text).Value = reservering.Achternaam;
+                cmd.Parameters.Add("?restaurant_id", MySqlDbType.Text).Value = reservering.Restaurant_id;
+                cmd.Parameters.Add("?personen", MySqlDbType.Text).Value = reservering.Personen;
+                cmd.Parameters.Add("?datum", MySqlDbType.Text).Value = reservering.Datum;
+                cmd.Parameters.Add("?tijd", MySqlDbType.Text).Value = reservering.Tijd;
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+
+
         public IActionResult Privacy()
         {
             return View();
