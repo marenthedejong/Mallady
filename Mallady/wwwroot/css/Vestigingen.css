@@ -1,4 +1,45 @@
-﻿
+﻿.tekst22 {
+    text-align: center;
+    color: #183052;
+}
+
+.tekst22 h1{
+    font-size: 35px;
+}
+
+.tekst22 p{
+    font-size: 25px;
+}
+
+.reserveerknop {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 0;
+}
+
+.reserveerknop p {
+        margin-left: 64px;
+        margin-top: 15px;
+        
+ }
+
+.reserveerknop a:link, a:visited {
+      background-color: #FFC67F;
+      color: #183052;
+      padding: 14px 25px;
+      text-decoration: none;
+      display: inline-block;
+      width: 250px;
+      height: 60px;
+      font-size: 25px;
+      margin-top: 5px;
+ }
+
+.reserveerknop a:hover, a:active {
+      background-color: white;
+ }
+
 
 footer{
     position: fixed;
