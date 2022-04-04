@@ -11,11 +11,37 @@
     font-size: 25px;
 }
 
+.restauranttekst {
+    width: 220px;
+    height: 160px;
+    background: #FFC67F;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    
+}
+
+.restauranttekst h2 {
+    text-align: center;
+    color: #183052;
+    font-size: 30px;
+ }
+
+.restauranttekst p {
+    text-align: center;
+    color: #183052;
+    font-size: 25px;
+}
+
+.container{
+    margin-top: 75px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .reserveerknop {
     display: flex;
     justify-content: center;
     padding: 10px;
-    margin-top: 0;
 }
 
 .reserveerknop p {
