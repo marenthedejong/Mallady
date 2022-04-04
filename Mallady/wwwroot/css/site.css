@@ -20,6 +20,7 @@ ul {
     text-align: center;
     font-size: 30px;
     list-style: none;
+    font-family: 'Poppins', sans-serif, 'arial';
 }
 
 ul li a {
@@ -66,7 +67,11 @@ footer {
     font-size: 20px;
     text-align: center;
     color: #183052;
-    
+}
+
+footer pre {
+    font-family: 'Poppins', sans-serif, 'arial';
+    color: #183052;
 }
 
 .Titel h1{
