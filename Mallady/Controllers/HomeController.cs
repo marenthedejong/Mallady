@@ -182,8 +182,8 @@ namespace Mallady.Controllers
             }
         }
 
-        [Route("Login")]
-        public IActionResult Login()
+        [Route("Reserveren")]
+        public IActionResult Reserveren()
         {
             return View();
         }
