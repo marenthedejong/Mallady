@@ -12,6 +12,7 @@
 <div class = "Tekst">
     <h1>Reserveren</h1>
     <p>Hier kunt u een reservering maken voor in één van onze restaurants!</p>
+    <p>Gelieve de datum in te vullen als: yy - mm - dd en de tijd in een vorm als hour:mins:sec</p>
 </div>
 
 <div class="container">
@@ -31,7 +32,7 @@
         </div>
 
         <div class="col-md-6 col-sm-12">
-            <div class="styled-input" style="float:right;">
+            <div class="styled-input">
                 <input placeholder="Restaurant" type="text" name="Restaurant" />
                
             </div>
@@ -46,7 +47,7 @@
 
          <div class="col-md-6 col-sm-12">
             <div class="styled-input">
-                <input placeholder= "Datum ( yy - mm - dd) en tijd (00:00:00)" type="text" name="Datumtijd" />
+                <input placeholder= "Datum en tijd" type="text" name="Datumtijd" />
                  @Html.ValidationMessageFor(m => m.Datumtijd)
             </div>
         </div>
