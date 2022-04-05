@@ -212,7 +212,7 @@ namespace Mallady.Controllers
                 cmd.Parameters.Add("?achternaam", MySqlDbType.Text).Value = reservering.Achternaam;
                 cmd.Parameters.Add("?restaurant_id", MySqlDbType.Int32).Value = reservering.Restaurant_id;
                 cmd.Parameters.Add("?personen", MySqlDbType.Int32).Value = reservering.Personen;
-                cmd.Parameters.Add("?datum", MySqlDbType.DateTime).Value = reservering.Datumtijd;
+                cmd.Parameters.Add("?datumtijd", MySqlDbType.DateTime).Value = reservering.Datumtijd;
                 cmd.ExecuteNonQuery();
             }
         }

@@ -10,8 +10,7 @@ namespace Mallady.Models
         [Required(ErrorMessage = "U bent verplicht uw achternaam in te vullen")]
         public string? Achternaam { get; set; }
 
-        [Required(ErrorMessage = "U bent verplicht een restaurant aan te geven")]
-        public int Restaurant_id { get; set; }
+        public int? Restaurant_id { get; set; }
 
         [Required(ErrorMessage = "U bent verplicht het aantal personen op te geven")]
         public int? Personen { get; set; }
