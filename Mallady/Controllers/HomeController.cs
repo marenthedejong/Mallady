@@ -195,10 +195,16 @@ namespace Mallady.Controllers
             if (ModelState.IsValid)
             {
                 SaveReservering(reservering);
-                return Redirect("/Succes");
+                return Redirect("/Succestwo");
             }
 
             return View(reservering);
+        }
+
+        [Route("Succestwo")]
+        public IActionResult Succestwo()
+        {
+            return View();
         }
 
         private void SaveReservering(Reservering reservering)
