@@ -1,4 +1,9 @@
 ﻿@using Mallady.Database;
+@model Reservering
+
+@{
+    ViewData["Title"] = "Reservering";
+}
 
 @section style {
     <link rel = "stylesheet" href = "~/css/Login.css" />
@@ -14,36 +19,42 @@
         <div class="col-xs-12">
             <div class="styled-input wide">
                 <input placeholder="Voornaam" type="text" name="Voornaam" />
+                 @Html.ValidationMessageFor(m => m.Voornaam)
             </div>
         </div>
 
         <div class="col-md-6 col-sm-12">
             <div class="styled-input">
                 <input placeholder="Achternaam" type="text" name="Achternaam" />
+                 @Html.ValidationMessageFor(m => m.Achternaam)
             </div>
         </div>
 
         <div class="col-md-6 col-sm-12">
             <div class="styled-input" style="float:right;">
                 <input placeholder="Restaurant" type="text" name="Restaurant" />
+                 @Html.ValidationMessageFor(m => m.Restaurant_id)
             </div>
         </div>
 
          <div class="col-md-6 col-sm-12">
             <div class="styled-input">
                 <input placeholder="Personen" type="text" name="Personen" />
+                 @Html.ValidationMessageFor(m => m.Personen)
             </div>
         </div>
 
         <div class="col-md-6 col-sm-12">
             <div class="styled-input">
                 <input placeholder="Datum" type="text" name="Datum" />
+                 @Html.ValidationMessageFor(m => m.Datum)
             </div>
         </div>
 
          <div class="col-md-6 col-sm-12">
             <div class="styled-input">
                 <input placeholder= "Tijd" type="text" name="Tijd" />
+                 @Html.ValidationMessageFor(m => m.Tijd)
             </div>
         </div>
 

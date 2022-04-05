@@ -4,17 +4,23 @@ namespace Mallady.Models
 {
     public class Reservering
     {
+        [Required(ErrorMessage = "U bent verplicht uw voornaam in te vullen")]
         public string? Voornaam { get; set; }
 
+        [Required(ErrorMessage = "U bent verplicht uw achternaam in te vullen")]
         public string? Achternaam { get; set; }
 
-        public string? Restaurant_id { get; set; }
+        [Required(ErrorMessage = "U bent verplicht een restaurant aan te geven")]
+        public int? Restaurant_id { get; set; }
 
+        [Required(ErrorMessage = "U bent verplicht het aantal personen op te geven")]
         public int? Personen { get; set; }
 
-        public int? Datum { get; set; }
+        [Required(ErrorMessage = "U bent verplicht een datum op te geven")]
+        public Date? Datum { get; set; }
 
-        public int? Tijd { get; set; }
+        [Required(ErrorMessage = "U bent verplicht een tijd op te geven")]
+        public Time? Tijd { get; set; }
 
     }
 

@@ -210,10 +210,10 @@ namespace Mallady.Controllers
 
                 cmd.Parameters.Add("?voornaam", MySqlDbType.Text).Value = reservering.Voornaam;
                 cmd.Parameters.Add("?achternaam", MySqlDbType.Text).Value = reservering.Achternaam;
-                cmd.Parameters.Add("?restaurant_id", MySqlDbType.Text).Value = reservering.Restaurant_id;
-                cmd.Parameters.Add("?personen", MySqlDbType.Text).Value = reservering.Personen;
-                cmd.Parameters.Add("?datum", MySqlDbType.Text).Value = reservering.Datum;
-                cmd.Parameters.Add("?tijd", MySqlDbType.Text).Value = reservering.Tijd;
+                cmd.Parameters.Add("?restaurant_id", MySqlDbType.Int32).Value = reservering.Restaurant_id;
+                cmd.Parameters.Add("?personen", MySqlDbType.Int32).Value = reservering.Personen;
+                cmd.Parameters.Add("?datum", MySqlDbType.Date).Value = reservering.Datum;
+                cmd.Parameters.Add("?tijd", MySqlDbType.Time).Value = reservering.Tijd;
                 cmd.ExecuteNonQuery();
             }
         }
