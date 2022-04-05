@@ -206,14 +206,13 @@ namespace Mallady.Controllers
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO reservering(voornaam, achternaam, restaurant_id, personen, datum, tijd) VALUES(?voornaam, ?achternaam, ?restaurant_id, ?personen, ?datum, ?tijd)", conn);
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO reservering(voornaam, achternaam, restaurant_id, personen, datumtijd) VALUES(?voornaam, ?achternaam, ?restaurant_id, ?personen, ?datumtijd)", conn);
 
                 cmd.Parameters.Add("?voornaam", MySqlDbType.Text).Value = reservering.Voornaam;
                 cmd.Parameters.Add("?achternaam", MySqlDbType.Text).Value = reservering.Achternaam;
                 cmd.Parameters.Add("?restaurant_id", MySqlDbType.Int32).Value = reservering.Restaurant_id;
                 cmd.Parameters.Add("?personen", MySqlDbType.Int32).Value = reservering.Personen;
-                cmd.Parameters.Add("?datum", MySqlDbType.Date).Value = reservering.Datum;
-                cmd.Parameters.Add("?tijd", MySqlDbType.Time).Value = reservering.Tijd;
+                cmd.Parameters.Add("?datum", MySqlDbType.DateTime).Value = reservering.Datumtijd;
                 cmd.ExecuteNonQuery();
             }
         }

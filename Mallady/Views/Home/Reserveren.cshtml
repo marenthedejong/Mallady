@@ -44,17 +44,10 @@
             </div>
         </div>
 
-        <div class="col-md-6 col-sm-12">
-            <div class="styled-input">
-                <input placeholder="Datum" type="text" name="Datum" />
-                 @Html.ValidationMessageFor(m => m.Datum)
-            </div>
-        </div>
-
          <div class="col-md-6 col-sm-12">
             <div class="styled-input">
-                <input placeholder= "Tijd" type="text" name="Tijd" />
-                 @Html.ValidationMessageFor(m => m.Tijd)
+                <input placeholder= "Datum ( yy - mm - dd) en tijd (00:00:00)" type="text" name="Datumtijd" />
+                 @Html.ValidationMessageFor(m => m.Datumtijd)
             </div>
         </div>
 
