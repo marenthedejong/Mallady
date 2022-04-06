@@ -30,5 +30,20 @@ img {
 .info {
     text-align: center;
     font-size: 25px;
-    line-height: 0,8;
+    line-height: 0;
+}
+
+.bestelknop {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 0;
+}
+
+.bestelknop p {
+        margin-top: 15px;
+}
+
+.bestelknop a:hover, a:active {
+        background-color: white;
 }
