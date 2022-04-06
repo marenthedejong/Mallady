@@ -17,6 +17,9 @@ namespace Mallady.Models
 
         [Required(ErrorMessage = "U bent verplicht een datum en tijd op te geven")]
         public DateTime? Datumtijd { get; set; }
+
+        [Required(ErrorMessage = "U bent verplicht een locatie op te geven")]
+        public string? Locatie { get; set; }
     }
 
 } 

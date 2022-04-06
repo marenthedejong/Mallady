@@ -11,8 +11,8 @@ namespace Mallady.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        private readonly string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110374;Uid=110374;Pwd=inf2021sql;";
-        //private readonly string connectionString = "Server=172.16.160.21;Port=3306;Database=110374;Uid=110374;Pwd=inf2021sql;";
+        //private readonly string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110374;Uid=110374;Pwd=inf2021sql;";
+        private readonly string connectionString = "Server=172.16.160.21;Port=3306;Database=110374;Uid=110374;Pwd=inf2021sql;";
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -212,13 +212,14 @@ namespace Mallady.Controllers
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO reservering(voornaam, achternaam, restaurant_id, personen, datumtijd) VALUES(?voornaam, ?achternaam, ?restaurant_id, ?personen, ?datumtijd)", conn);
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO reservering(voornaam, achternaam, restaurant_id, personen, datumtijd, locatie) VALUES(?voornaam, ?achternaam, ?restaurant_id, ?personen, ?datumtijd, ?locatie)", conn);
 
                 cmd.Parameters.Add("?voornaam", MySqlDbType.Text).Value = reservering.Voornaam;
                 cmd.Parameters.Add("?achternaam", MySqlDbType.Text).Value = reservering.Achternaam;
                 cmd.Parameters.Add("?restaurant_id", MySqlDbType.Int32).Value = reservering.Restaurant_id;
                 cmd.Parameters.Add("?personen", MySqlDbType.Int32).Value = reservering.Personen;
                 cmd.Parameters.Add("?datumtijd", MySqlDbType.DateTime).Value = reservering.Datumtijd;
+                cmd.Parameters.Add("?locatie", MySqlDbType.Text).Value = reservering.Locatie;
                 cmd.ExecuteNonQuery();
             }
         }

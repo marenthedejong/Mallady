@@ -12,7 +12,7 @@
 <div class = "Tekst">
     <h1>Reserveren</h1>
     <p>Hier kunt u een reservering maken voor in één van onze restaurants!</p>
-    <p>Gelieve de datum in te vullen als: yy - mm - dd en de tijd in een vorm als hour:mins:sec</p>
+    <p>Gelieve de datum in te vullen als: yy - mm - dd en de tijd in een vorm als hour:mins:sec. Voor onze locaties kunt u Amersfoort, Amsterdam of Den Haag invullen.</p>
 </div>
 
 <div class="container">
@@ -31,13 +31,6 @@
             </div>
         </div>
 
-        <div class="col-md-6 col-sm-12">
-            <div class="styled-input">
-                <input placeholder="Restaurant" type="text" name="Restaurant" />
-               
-            </div>
-        </div>
-
          <div class="col-md-6 col-sm-12">
             <div class="styled-input">
                 <input placeholder="Personen" type="text" name="Personen" />
@@ -49,6 +42,13 @@
             <div class="styled-input">
                 <input placeholder= "Datum en tijd" type="text" name="Datumtijd" />
                  @Html.ValidationMessageFor(m => m.Datumtijd)
+            </div>
+        </div>
+
+         <div class="col-md-6 col-sm-12">
+            <div class="styled-input">
+                <input placeholder= "Locatie" type="text" name="Locatie" />
+                 @Html.ValidationMessageFor(m => m.Locatie)
             </div>
         </div>
 
