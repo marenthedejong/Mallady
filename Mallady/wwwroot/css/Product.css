@@ -7,3 +7,28 @@
 footer{
     position: fixed;
 }
+
+.titeltekst {
+    text-align: center;
+    color: #183052;
+    font-size: 35px;
+}
+
+footer {
+    position: fixed;
+}
+
+img {
+    height: 300px;
+    width: 400px;
+}
+
+#center {
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+    font-size: 25px;
+    line-height: 0,8;
+}
