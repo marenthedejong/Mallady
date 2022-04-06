@@ -16,14 +16,16 @@
       <p>Dit zijn al onze producten:</p>
   </div>
 
+  <div class="producten">
         @foreach (Product p in Model)
         {
-            <div class = 'producten'>
+            <div class = "product" >
                <img src="@p.Img"/>
                <p>@p.Naam : €@p.Prijs</p>
                 <p><a href="/Product/@p.id" class="lees"> Lees meer... </a></p>
             </div>
         }
+        </div>
     
 
 </body>

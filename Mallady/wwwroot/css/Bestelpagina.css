@@ -15,8 +15,20 @@
     font-size: 25px;
 }
 
-.lees {
-    text-decoration: none;
-    list-style: none;
-    color: #183052;
+.producten{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
 }
+
+    .product{
+        width: 400px;
+        margin-left: 60px;
+    }
+
+    .lees {
+        text-decoration: none;
+        list-style: none;
+        color: #183052;
+    }
