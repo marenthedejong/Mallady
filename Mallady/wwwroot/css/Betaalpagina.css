@@ -1,16 +1,72 @@
-﻿.tekst {
+﻿
+.bananotekst {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    color: #183052;
+}
+
+.bananotekst p{
+    font-size: 25px;
+}
+
+.bananotekst h1{
+    font-size: 35px;
+}
+
+.banano {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.ban {
+    text-align: center;
+    font-size: 25px;
+    color: #183052;
+}
+
+.uitleg {
+    font-size: 25px;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    color: #183052;
+}
+
+.uitleg p {
+      color: #183052;
+ }
+
+.uitleg a {
+    font-size: 25px;
+    color: #183052;
+ }
+
+.stappenplan a {
+    font-size: 25px;
+    color: #183052;
+}
+
+.stappenplan h3 {
+    font-size: 28px;
     text-align: center;
     color: #183052;
 }
 
-    .tekst h1 {
-        font-size: 35px;
-    }
+.stappenplan p {
+    font-size: 25px;
+    text-align: center;
+    color: #183052;
+}
 
-    .tekst p {
-        font-size: 25px;
-    }
+.lijst ul {
+    margin-left: 10vw;
+    font-size: 25px;
+    color: #183052;
+}
 
-footer {
-    position: fixed;
+.lijst p {
+    margin-left: 10vw;
+    font-size: 25px;
+    color: #183052;
 }
