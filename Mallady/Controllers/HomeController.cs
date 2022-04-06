@@ -82,6 +82,12 @@ namespace Mallady.Controllers
             return View();
         }
 
+        [Route("Betaalpagina")]
+        public IActionResult Betaalpagina()
+        {
+            return View();
+        }
+
         [Route("Product/{id}")]
         public IActionResult Product(string id)
         {
