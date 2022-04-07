@@ -133,12 +133,11 @@ namespace Mallady.Controllers
         }
 
 
-
-
         [Route("Vestigingen")]
         public IActionResult Vestigingen()
         {
-            return View();
+            var restaurant = GetRestaurants();
+            return View(restaurant);
         }
 
         [HttpPost]
@@ -228,6 +227,48 @@ namespace Mallady.Controllers
                 cmd.Parameters.Add("?locatie", MySqlDbType.Text).Value = reservering.Locatie;
                 cmd.ExecuteNonQuery();
             }
+        }
+
+        public List<Restaurant> GetRestaurants()
+        {
+
+            // maak een lege lijst waar we de namen in gaan opslaan
+            List<Restaurant> Restaurants = new List<Restaurant>();
+
+            // verbinding maken met de database
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                // verbinding openen
+                conn.Open();
+
+                // SQL query die we willen uitvoeren
+                MySqlCommand cmd = new MySqlCommand("select * from restaurant", conn);
+
+                // resultaat van de query lezen
+                using (var reader = cmd.ExecuteReader())
+                {
+                    // elke keer een regel (of eigenlijk: database rij) lezen
+                    while (reader.Read())
+                    {
+                        Restaurant r = new Restaurant
+
+                        {
+                            id = Convert.ToInt32(reader["Id"]),
+                            Locatie = reader["locatie"].ToString(),
+                            Datumtijd = DateTime.Parse(reader["datumtijd"].ToString()),
+                            Stoelen = Convert.ToInt32(reader["stoelen"]),
+                            Adres = reader["adres"].ToString(),
+                            Image = reader["fotovestiging"].ToString(),
+
+                        };
+
+                        Restaurants.Add(r);
+                    }
+                }
+            }
+
+            // return de lijst met namen
+           return Restaurants;
         }
 
 
