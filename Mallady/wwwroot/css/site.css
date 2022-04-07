@@ -6,7 +6,7 @@
     width: 100%;
 }
 
-ul {
+.navigatie ul {
     margin: 0px;
     padding: 0px;
 }
@@ -23,15 +23,15 @@ ul {
     font-family: 'Poppins', sans-serif, 'arial';
 }
 
-ul li a {
+.nav-links ul li a {
     text-decoration: none;
     display: block;
     color: #183052;
 }
 
-    ul li a:hover {
-        background-color: #b7dfed;
-    }
+.nav-links ul li a:hover {
+    background-color: #b7dfed;
+}
 
 ul li ul li {
     display: none;
