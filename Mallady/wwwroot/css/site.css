@@ -112,3 +112,15 @@ footer {
     font-size: 25px;
     color: #183052;
 }
+
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+}
+
+.socialmedia {
+    width: 500px;
+    margin-left: 100px;
+}
