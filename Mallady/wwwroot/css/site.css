@@ -118,9 +118,5 @@ footer {
     flex-wrap: wrap;
     flex-direction: row;
     text-align: center;
-}
-
-.socialmedia {
-    width: 500px;
-    margin-left: 100px;
+    justify-content: space-around;
 }
