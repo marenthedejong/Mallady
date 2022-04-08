@@ -4,26 +4,19 @@
     font-size: 35px;
 }
 
-footer{
-    position: fixed;
-}
-
 .titeltekst {
     text-align: center;
     color: #183052;
     font-size: 35px;
 }
 
-footer {
-    position: fixed;
-}
 
-img {
+.center img {
     height: 300px;
     width: 400px;
 }
 
-#center {
+.center {
     text-align: center;
 }
 
