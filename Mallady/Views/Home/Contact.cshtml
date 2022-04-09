@@ -12,7 +12,7 @@
 
 <div class="container">
     <div class="row">
-        <h1>contact us</h1>
+        <h1>Contact us</h1>
     </div>
     <div class="row">
         <h4 style="text-align:center">Stuur hier je vraag in!</h4>
@@ -47,6 +47,19 @@
                  @Html.ValidationMessageFor(m => m.Bericht)
             </div>
         </div>
+
+         <div class="col-xs-12">
+            <div class="styled-input wide">
+                <input placeholder="Gebruikersnaam" type="text" name="Gebruikersnaam" />
+            </div>
+        </div>
+
+         <div class="col-xs-12">
+            <div class="styled-input wide">
+                <input placeholder="Wachtwoord" type="text" name="Wachtwoord" />
+            </div>
+        </div>
+
 
         <div class="col-xs-12">
             <input class="btn-lrg submit-btn" type="submit" value="verstuur" />
