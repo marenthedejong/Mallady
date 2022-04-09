@@ -4,8 +4,9 @@
 
 
 @section style {
-    <link rel = "stylesheet" href = "~/css/Vestigingen.css" />
+    <link id = "mystylesheet" rel = "stylesheet" href = "~/css/Vestigingen.css" />
 }
+
 
 <div class = "tekst22"> 
     <h1>Vestigingen</h1>
@@ -27,3 +28,17 @@
 <div class = "reserveerknop">
         <a href="/Reserveren"><p>Reserveren</p></a>
 </div>   
+
+<div class = "dagnacht">
+       <button class="btn btn-light" onclick="swapStyle('Vestigingen.css')">Light Mode</button>
+	   <button class="btn btn-dark" onclick="swapStyle('DonkerVestigingen.css')">Dark Mode</button>
+   </div>
+
+
+<script type="text/javascript">
+
+        function swapStyle(sheet){
+            document.getElementById('mystylesheet').href = sheet
+        }
+
+</script>
