@@ -1,1 +1,15 @@
-﻿
+﻿.Tekst h1 {
+    color: #183052;
+    text-align: center;
+    font-size: 35px;
+}
+
+.Tekst p {
+    font-size: 25px;
+    text-align: center;
+    color: #183052;
+}
+
+footer{
+    position: fixed;
+}
