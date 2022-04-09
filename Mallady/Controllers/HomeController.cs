@@ -23,8 +23,7 @@ namespace Mallady.Controllers
         }
         
         public IActionResult Index()
-        {
-            ViewData["user"] = HttpContext.Session.GetString("User");
+        { 
 
 
             return View();
@@ -295,9 +294,17 @@ namespace Mallady.Controllers
                 if (p.Wachtwoord == hash)
                 {
                     HttpContext.Session.SetString("User", gebruikersnaam);
-                    return Redirect("/");
+                    return Redirect("/Ingelogd");
                 }
             }
+
+            return View();
+        }
+
+        [Route("Ingelogd")]
+        public IActionResult Ingelogd()
+        {
+            ViewData["user"] = HttpContext.Session.GetString("User");
 
             return View();
         }

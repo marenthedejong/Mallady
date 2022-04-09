@@ -15,6 +15,13 @@ h4 {
     line-height: 1.5;
 }
 
+#tekst p {
+    font-family: 'Roboto', sans-serif, 'arial';
+    font-size: 25px;
+    text-align: center;
+    color: #183052;
+}
+
 input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
     font-size: 0.75em;
     color: #999;
