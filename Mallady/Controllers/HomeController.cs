@@ -5,6 +5,8 @@ using System.Diagnostics;
 using MySql.Data.MySqlClient;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Http;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Mallady.Controllers
 {
@@ -281,10 +283,19 @@ namespace Mallady.Controllers
         [Route("Login")]
         public IActionResult Login(string gebruikersnaam, string wachtwoord)
         {
-            if (wachtwoord == "geheim")
+            if (!string.IsNullOrWhiteSpace(wachtwoord))
             {
-                HttpContext.Session.SetString("User", gebruikersnaam);
-                return Redirect("/");
+                Person p = GetPerson(gebruikersnaam);
+                if (p == null)
+                    return View();
+
+                string hash = ComputeSha256Hash(wachtwoord);
+
+                if (p.Wachtwoord == hash)
+                {
+                    HttpContext.Session.SetString("User", gebruikersnaam);
+                    return Redirect("/");
+                }
             }
 
             return View();
@@ -295,6 +306,53 @@ namespace Mallady.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        static string ComputeSha256Hash(string rawData)
+        {
+            // Create a SHA256   
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                // ComputeHash - returns byte array  
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(rawData));
+
+                // Convert byte array to a string   
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
+        private Person GetPerson(string gebruikersnaam)
+        {
+            List<Person> persons = new List<Person>();
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand($"select * from klant where gebruikersnaam = '{gebruikersnaam}'", conn);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Person p = new Person
+                        {
+                            // selecteer de kolommen die je wil lezen. In dit geval kiezen we de kolom "naam"
+                            Wachtwoord = reader["Wachtwoord"].ToString(),
+
+                        };
+
+                        persons.Add(p);
+                    }
+                }
+            }
+            return persons[0];
+        }
+
+
     }
 
 }
