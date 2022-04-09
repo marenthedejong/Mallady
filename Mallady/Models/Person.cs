@@ -18,7 +18,6 @@ namespace Mallady.Models
         [Required(ErrorMessage = "U bent verplicht uw emailadres in te vullen")]
         public string? Email { get; set; }
 
-        [Required(ErrorMessage = "U bent verplicht een bericht in te vullen")]
         public string? Bericht { get; set; }
 
         
