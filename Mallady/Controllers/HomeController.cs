@@ -180,6 +180,7 @@ namespace Mallady.Controllers
 
         private void SavePerson(Person person)
         {
+            person.Wachtwoord = ComputeSha256Hash(person.Wachtwoord);
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
