@@ -3,7 +3,8 @@ using Mallady.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using MySql.Data.MySqlClient;
-
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Http;
 
 namespace Mallady.Controllers
 {
@@ -21,6 +22,9 @@ namespace Mallady.Controllers
         
         public IActionResult Index()
         {
+            ViewData["user"] = HttpContext.Session.GetString("User");
+
+
             return View();
         }
         
@@ -274,9 +278,15 @@ namespace Mallady.Controllers
         }
 
 
-
-        public IActionResult Privacy()
+        [Route("Login")]
+        public IActionResult Login(string gebruikersnaam, string wachtwoord)
         {
+            if (wachtwoord == "geheim")
+            {
+                HttpContext.Session.SetString("User", gebruikersnaam);
+                return Redirect("/");
+            }
+
             return View();
         }
 
