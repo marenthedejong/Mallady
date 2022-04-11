@@ -14,8 +14,8 @@ namespace Mallady.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        //private readonly string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110374;Uid=110374;Pwd=inf2021sql;";
-        private readonly string connectionString = "Server=172.16.160.21;Port=3306;Database=110374;Uid=110374;Pwd=inf2021sql;";
+        private readonly string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110374;Uid=110374;Pwd=inf2021sql;";
+        //private readonly string connectionString = "Server=172.16.160.21;Port=3306;Database=110374;Uid=110374;Pwd=inf2021sql;";
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -263,8 +263,6 @@ namespace Mallady.Controllers
                         {
                             id = Convert.ToInt32(reader["Id"]),
                             Locatie = reader["locatie"].ToString(),
-                            Datumtijd = DateTime.Parse(reader["datumtijd"].ToString()),
-                            Stoelen = Convert.ToInt32(reader["stoelen"]),
                             Adres = reader["adres"].ToString(),
                             Image = reader["fotovestiging"].ToString(),
 
