@@ -1,6 +1,12 @@
 ﻿@section style{
-     <link rel = "stylesheet" href = "~/css/Betaalpagina.css" />
+     <link id = "mystylesheet" rel = "stylesheet" href = "~/css/Betaalpagina.css" />
 }
+
+<div class = "box">
+       <button class="btn btn-light" onclick="swapStyle('/css/Betaalpagina.css')">Dagmodus</button>
+	   <button class="btn btn-dark" onclick="swapStyle('/css/DonkerBetaalpagina.css')">Nachtmodus</button>
+</div>
+
 
 <div class = "bananotekst">   
     <h1>Onze betaalmethode</h1>    
@@ -57,3 +63,10 @@
     <p>Het BAN-nummer van onze banano-wallet: ban_3xwr3migeekat7sqnanu7t11rqto97oeom9w4hpst15jubbsnzg5ajowce4c </p>
 </div>
 
+<script type="text/javascript">
+
+        function swapStyle(sheet){
+            document.getElementById('mystylesheet').href = sheet
+        }
+
+</script>

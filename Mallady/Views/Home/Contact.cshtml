@@ -6,8 +6,13 @@
 }
 
 @section style{
-     <link rel = "stylesheet" href = "~/css/Contact.css" />
+     <link id = "mystylesheet" rel = "stylesheet" href = "~/css/Contact.css" />
 }
+
+<div class = "box">
+       <button class="btn btn-light" onclick="swapStyle('/css/Contact.css')">Dagmodus</button>
+	   <button class="btn btn-dark" onclick="swapStyle('/css/DonkerContact.css')">Nachtmodus</button>
+</div>
 
 
 <div class="container">
@@ -71,4 +76,11 @@
     </form>
 </div>
 
+<script type="text/javascript">
+
+        function swapStyle(sheet){
+            document.getElementById('mystylesheet').href = sheet
+        }
+
+</script>
 

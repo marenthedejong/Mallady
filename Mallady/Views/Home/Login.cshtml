@@ -3,8 +3,13 @@
 }
 
 @section style {
-    <link rel = "stylesheet" href = "~/css/Login.css" />
+    <link id = "mystylesheet" rel = "stylesheet" href = "~/css/Login.css" />
 }
+
+<div class = "box">
+       <button class="btn btn-light" onclick="swapStyle('/css/Login.css')">Dagmodus</button>
+	   <button class="btn btn-dark" onclick="swapStyle('/css/DonkerLogin.css')">Nachtmodus</button>
+</div>
 
 <div class = "Tekst"> 
 
@@ -35,3 +40,10 @@
         
 </form>
 
+<script type="text/javascript">
+
+        function swapStyle(sheet){
+            document.getElementById('mystylesheet').href = sheet
+        }
+
+</script>

@@ -1,9 +1,22 @@
 ﻿@section style{
-     <link rel = "stylesheet" href = "~/css/Succes.css" />
+     <link id = "mystylesheet"  rel = "stylesheet" href = "~/css/Succes.css" />
 }
+
+<div class = "box">
+       <button class="btn btn-light" onclick="swapStyle('/css/Succes.css')">Dagmodus</button>
+	   <button class="btn btn-dark" onclick="swapStyle('/css/DonkerSucces.css')">Nachtmodus</button>
+</div>
 
 <div class = "tekst">
     <h1> Uw bent succesvol ingelogd! </h1>
 
     <p> Welkom @ViewData["user"] </p>
 </div>
+
+<script type="text/javascript">
+
+        function swapStyle(sheet){
+            document.getElementById('mystylesheet').href = sheet
+        }
+
+</script>

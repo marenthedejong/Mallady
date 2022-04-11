@@ -5,8 +5,14 @@
 }
 
 @section style{
-     <link rel = "stylesheet" href = "~/css/Menu.css" />
+     <link id = "mystylesheet"  rel = "stylesheet" href = "~/css/Menu.css" />
 }
+
+<div class = "box">
+       <button class="btn btn-light" onclick="swapStyle('/css/Menu.css')">Dagmodus</button>
+	   <button class="btn btn-dark" onclick="swapStyle('/css/DonkerMenu.css')">Nachtmodus</button>
+</div>
+
 
 <div class = "Menu_tekst">
    <h1>Menukaart</h1>
@@ -16,3 +22,11 @@
 <div class = "Menukaart">
        <img src="img/Menukaart.jpg" width = "700" height = "600"> 
 </div>
+
+<script type="text/javascript">
+
+        function swapStyle(sheet){
+            document.getElementById('mystylesheet').href = sheet
+        }
+
+</script>
