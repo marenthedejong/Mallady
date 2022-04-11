@@ -2,6 +2,11 @@
     position: fixed;
 }
 
+body {
+    background: black;
+}
+
+
 .Tekst {
     text-align: center;
     color: #183052;

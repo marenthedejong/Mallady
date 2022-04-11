@@ -21,6 +21,10 @@ p {
     text-align: center;
 }
 
+body {
+    background: black;
+}
+
 
 footer{
     position: fixed;

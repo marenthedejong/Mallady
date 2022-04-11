@@ -127,3 +127,7 @@ input[type=checkbox]:checked + label {
     color: #f00;
     font-style: normal;
 }
+
+body {
+    background: black;
+}

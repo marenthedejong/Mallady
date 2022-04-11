@@ -40,3 +40,7 @@
 .bestelknop a:hover, a:active {
         background-color: white;
 }
+
+body {
+    background: black;
+}
