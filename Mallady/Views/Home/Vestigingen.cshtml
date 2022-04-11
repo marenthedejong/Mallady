@@ -7,17 +7,15 @@
     <link id = "mystylesheet" rel = "stylesheet" href = "~/css/Vestigingen.css" />
 }
 
-<div id = "box">
-       <button class="btn btn-light" onclick="swapStyle('/css/Vestigingen.css')">Light Mode</button>
-	   <button class="btn btn-dark" onclick="swapStyle('/css/DonkerVestigingen.css')">Dark Mode</button>
+<div class = "box">
+       <button class="btn btn-light" onclick="swapStyle('/css/Vestigingen.css')">Dagmodus</button>
+	   <button class="btn btn-dark" onclick="swapStyle('/css/DonkerVestigingen.css')">Nachtmodus</button>
 </div>
 
 <div class = "tekst22"> 
     <h1>Vestigingen</h1>
     <p>Kom gezellig langs in één van onze vestigingen!</p>
 </div>
-
-
 
 <div class = "container">
         @foreach (Restaurant r in Model)

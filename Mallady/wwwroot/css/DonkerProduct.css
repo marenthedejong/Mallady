@@ -1,0 +1,42 @@
+﻿.titeltekst {
+    text-align: center;
+    color: #183052;
+    font-size: 35px;
+}
+
+.titeltekst {
+    text-align: center;
+    color: #183052;
+    font-size: 35px;
+}
+
+
+.center img {
+    height: 300px;
+    width: 400px;
+}
+
+.center {
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+    font-size: 25px;
+    line-height: 0;
+}
+
+.bestelknop {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 0;
+}
+
+.bestelknop p {
+        margin-top: 15px;
+}
+
+.bestelknop a:hover, a:active {
+        background-color: white;
+}

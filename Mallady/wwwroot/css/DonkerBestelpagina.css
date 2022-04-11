@@ -1,0 +1,38 @@
+﻿.Titel h1{
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 35px;
+}
+
+.tekst1 {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 25px;
+}
+
+.producten p {
+    color: #FFFFFF;
+    font-size: 25px;
+}
+
+.producten{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+}
+
+    .product{
+        width: 400px;
+        margin-left: 60px;
+    }
+
+    .lees  {
+        text-decoration: none;
+        list-style: none;
+        color: white;
+    }
+
+body{
+    background: black; 
+}

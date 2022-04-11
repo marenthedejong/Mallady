@@ -2,10 +2,16 @@
 @model List<Product>
 
 @section style {
-    <link rel = "stylesheet" href = "~/css/Bestelpagina.css" />
+    <link id = "mystylesheet" rel = "stylesheet" href = "~/css/Bestelpagina.css" />
 }
 
 <body>
+
+  <div class = "box">
+       <button class="btn btn-light" onclick="swapStyle('/css/Bestelpagina.css')">Dagmodus</button>
+	   <button class="btn btn-dark" onclick="swapStyle('/css/DonkerBestelpagina.css')">Nachtmodus</button>
+  </div>
+
   <div class = 'Titel'>
     <h1>Bestelpagina</h1>
     
@@ -26,8 +32,13 @@
             </div>
         }
         </div>
-    
-
 </body>
 
+<script type="text/javascript">
+
+        function swapStyle(sheet){
+            document.getElementById('mystylesheet').href = sheet
+        }
+
+</script>
 

@@ -1,0 +1,76 @@
+﻿
+.bananotekst {
+
+    width: 80%;
+    margin: auto;
+    color: #183052;
+}
+
+.stapjes{
+
+}
+.bananotekst p {
+    font-size: 25px;
+}
+
+.bananotekst h1{
+    font-size: 35px;
+    text-align: center;
+}
+
+.banano {
+    float: left;
+    padding: 0px 10px;
+}
+
+.ban {
+   
+    font-size: 25px;
+    color: #183052;
+}
+
+.uitleg {
+    font-size: 25px;
+
+    width: 80%;
+    margin: auto;
+    color: #183052;
+}
+
+.uitleg p {
+      color: #183052;
+ }
+
+.uitleg a {
+    font-size: 25px;
+    color: #183052;
+ }
+
+.stappenplan a {
+    font-size: 25px;
+    color: #183052;
+}
+
+.stappenplan h3 {
+    font-size: 28px;
+
+    color: #183052;
+}
+
+.stappenplan p {
+    font-size: 25px;
+    
+    color: #183052;
+}
+
+.lijst ul {
+    margin-left: 10vw;
+    font-size: 25px;
+    color: #183052;
+}
+
+.lijst p {
+    margin-left: 10vw;
+    font-size: 25px;
+    color: #183052;
+}

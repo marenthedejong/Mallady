@@ -1,0 +1,16 @@
+﻿.tekst {
+    text-align: center;
+    color: #183052;
+}
+
+    .tekst h1 {
+        font-size: 35px;
+    }
+
+    .tekst p {
+        font-size: 25px;
+    }
+
+footer {
+    position: fixed;
+}
