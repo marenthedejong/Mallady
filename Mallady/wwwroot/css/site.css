@@ -13,7 +13,7 @@
 
 .nav-links ul li {
     float: left;
-    width: 200px;
+    width: 194px;
     height: 40px;
     opacity: .95;
     line-height: 40px;
@@ -119,4 +119,12 @@ footer {
     flex-direction: row;
     text-align: center;
     justify-content: space-around;
+}
+
+@media only screen and (max-width: 700px) {
+    .nav-links ul li {
+        width: 194px;
+        font-size: 20px;
+        display: block;
+    }
 }
