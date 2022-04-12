@@ -1,16 +1,14 @@
-﻿.Menu_tekst {
+﻿.Menu_tekst h1 {
     text-align: center;
-    color: #183052;
-    
-}
-
-.Menu_tekst h1{
+    color: #FFFFFF;
     font-size: 35px;
-}
+ }
 
-.Menu_tekst p{
-    font-size: 25px;
-}
+.Menu_tekst p {
+     text-align: center;
+     color: #FFFFFF;
+     font-size: 25px;
+ }
 
 footer{
     position: fixed;
@@ -22,5 +20,5 @@ footer{
 }
 
 body {
-    background: black;
+    color: black;
 }
