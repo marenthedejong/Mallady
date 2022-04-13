@@ -72,3 +72,16 @@ body {
     background: black;
 }
 
+@media only screen and (max-width: 672px) {
+    .info {
+        width: 100%;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .info {
+        width: 100%;
+        font-size: 15px;
+    }
+}

@@ -91,7 +91,13 @@
       background-color: white;
  }
 
-
 footer{
     position: fixed;
+}
+
+@media only screen and (max-width: 200px) {
+    .footer {
+        display: grid;
+         place-items: center;
+    }
 }
