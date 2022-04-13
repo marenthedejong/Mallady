@@ -2,47 +2,11 @@
     background: #F0FBFF;
     display: flex;
     align-items: center;
-    height: 100px;
     width: 100%;
 }
 
-.navigatie ul {
-    margin: 0px;
-    padding: 0px;
-}
-
-.nav-links ul li {
-    float: left;
-    width: 194px;
-    height: 40px;
-    opacity: .95;
-    line-height: 40px;
-    text-align: center;
-    font-size: 30px;
-    list-style: none;
-    font-family: 'Poppins', sans-serif, 'arial';
-}
-
-    .nav-links ul li a {
-        text-decoration: none;
-        display: block;
-        color: #183052;
-    }
-
-        .nav-links ul li a:hover {
-            background-color: #b7dfed;
-        }
-
-ul li ul li {
-    display: none;
-}
-
-ul li:hover ul li {
-    display: block;
-}
-
 nav {
-    height: 128px;
+    height: 130px;
     background: #F0FBFF;
     display: flex;
     justify-content: space-around;
@@ -51,14 +15,19 @@ nav {
     align-items: center;
 }
 
+ nav a {
+     text-decoration: none;
+     font-size: 30px;
+  }
+
+nav a:hover {
+    background-color: #b7dfed;
+}
+
 .logo {
     position: absolute;
     left: 0;
     top: 0;
-}
-
-nav a {
-    text-decoration: none;
 }
 
 body {
