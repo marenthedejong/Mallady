@@ -1,21 +1,18 @@
-﻿
-.bananotekst {
-
+﻿.bananotekst {
     width: 80%;
     margin: auto;
     color: #183052;
 }
 
-.stapjes{
-
-}
 .bananotekst p {
     font-size: 25px;
+    color: white;
 }
 
 .bananotekst h1{
     font-size: 35px;
     text-align: center;
+    color: white;
 }
 
 .banano {
@@ -24,55 +21,55 @@
 }
 
 .ban {
-   
     font-size: 25px;
-    color: #183052;
+    color: white;
 }
 
 .uitleg {
     font-size: 25px;
-
     width: 80%;
     margin: auto;
-    color: #183052;
+    color: white;
 }
 
 .uitleg p {
-      color: #183052;
+      color: white;
  }
 
 .uitleg a {
     font-size: 25px;
-    color: #183052;
+    color: white;
  }
 
 .stappenplan a {
     font-size: 25px;
-    color: #183052;
+    color: white;
 }
 
 .stappenplan h3 {
     font-size: 28px;
-
-    color: #183052;
+    color: white;
 }
 
 .stappenplan p {
     font-size: 25px;
-    
-    color: #183052;
+    color: white;
 }
 
 .lijst ul {
-    margin-left: 10vw;
     font-size: 25px;
-    color: #183052;
+    color: white;
+}
+
+.linkje {
+    text-decoration: none;
+    list-style: none;
+    color: white;
 }
 
 .lijst p {
-    margin-left: 10vw;
     font-size: 25px;
-    color: #183052;
+    color: white;
 }
 
 body {

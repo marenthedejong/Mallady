@@ -1,14 +1,11 @@
 ﻿
 .bananotekst {
-
     width: 80%;
     margin: auto;
     color: #183052;
 }
 
-.stapjes{
 
-}
 .bananotekst p {
     font-size: 25px;
 }
@@ -24,14 +21,12 @@
 }
 
 .ban {
-   
     font-size: 25px;
     color: #183052;
 }
 
 .uitleg {
     font-size: 25px;
-
     width: 80%;
     margin: auto;
     color: #183052;
@@ -53,24 +48,27 @@
 
 .stappenplan h3 {
     font-size: 28px;
-
     color: #183052;
 }
 
 .stappenplan p {
     font-size: 25px;
-    
     color: #183052;
 }
 
 .lijst ul {
-    margin-left: 10vw;
     font-size: 25px;
     color: #183052;
 }
 
+.linkje {
+    text-decoration: none;
+    list-style: none;
+    color: #183052;
+}
+
 .lijst p {
-    margin-left: 10vw;
     font-size: 25px;
     color: #183052;
 }
+
