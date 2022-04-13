@@ -1,4 +1,21 @@
-﻿
+﻿.box {
+    padding: 10px;
+    margin-top: 25px;
+    background: gray;
+    margin-left: 20px;
+    width: 6%;
+}
+
+    .box a {
+        color: white;
+        font-size: 20px;
+    }
+
+.knopjes {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 h1 {
     margin-top: 85px;
     font-family: 'Poppins', sans-serif, 'arial';
