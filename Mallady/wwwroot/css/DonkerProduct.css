@@ -1,15 +1,8 @@
 ﻿.titeltekst {
     text-align: center;
-    color: #183052;
+    color: #FFFFFF;
     font-size: 35px;
 }
-
-.titeltekst {
-    text-align: center;
-    color: #183052;
-    font-size: 35px;
-}
-
 
 .center img {
     height: 300px;
@@ -21,6 +14,7 @@
 }
 
 .info {
+    color: #FFFFFF;
     text-align: center;
     font-size: 25px;
     line-height: 0;

@@ -4,6 +4,10 @@
     font-size: 35px;
 }
 
+.Tekst a {
+    color: #183052;
+}
+
 .Tekst p {
     font-size: 25px;
     text-align: center;
