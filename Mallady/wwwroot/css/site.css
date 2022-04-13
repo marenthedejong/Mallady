@@ -6,18 +6,18 @@
 }
 
 nav {
-    height: 130px;
+    
     background: #F0FBFF;
     display: flex;
     justify-content: space-around;
-    width: 100%;
     padding-left: 200px;
     align-items: center;
 }
 
  nav a {
      text-decoration: none;
-     font-size: 30px;
+     font-size: 33px;
+     padding: 30px;
   }
 
 nav a:hover {
@@ -102,10 +102,29 @@ footer {
     justify-content: space-around;
 }
 
+
+@media only screen and (max-width: 1330px) {
+    nav a{
+        font-size: 30px;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    nav {
+        padding-left: 150px;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        flex-direction: row;
+    }
+
+}
+
 @media only screen and (max-width: 700px) {
-    .nav-links ul li {
-        width: 194px;
-        font-size: 20px;
-        display: block;
+    nav {
+        background: #F0FBFF;
+        display: flex;
+        justify-content: flex-start;
+        align-content: stretch;
     }
 }
