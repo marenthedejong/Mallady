@@ -2,49 +2,39 @@
 @model List<Product>
 
 @section style {
-    <link id = "mystylesheet" rel = "stylesheet" href = "~/css/Bestelpagina.css" />
+<link id="mystylesheet" rel="stylesheet" href="~/css/Bestelpagina.css" />
 }
 
-<body>
 
-  <div class = "knopjes">
-    <div class = "box">
-       <a onclick="swapStyle('/css/Bestelpagina.css')">Dagmodus</a>
+
+<div class="knopjes">
+    <div class="box">
+        <a onclick="swapStyle('/css/Bestelpagina.css')">Dagmodus</a>
     </div>
 
-    <div class = "box">
-	   <a onclick="swapStyle('/css/DonkerBestelpagina.css')">Nachtmodus</a>
+    <div class="box">
+        <a onclick="swapStyle('/css/DonkerBestelpagina.css')">Nachtmodus</a>
     </div>
 </div>
 
 
-  <div class = 'Titel'>
+<div class='Titel'>
     <h1>Bestelpagina</h1>
-    
-  </div>
 
-  <div class = 'tekst1'>
-      <p>Hier kunt u online ons gehele assortiment bestellen!</p>
-      <p>Dit zijn al onze producten:</p>
-  </div>
+</div>
 
-  <div class="producten">
-        @foreach (Product p in Model)
-        {
-            <div class = "product" >
-               <img src="@p.Img"/>
-               <p>@p.Naam : €@p.Prijs</p>
-                <p><a href="/Product/@p.id" class="lees"> Lees meer... </a></p>
-            </div>
-        }
+<div class='tekst1'>
+    <p>Hier kunt u online ons gehele assortiment bestellen!</p>
+    <p>Dit zijn al onze producten:</p>
+</div>
+
+<div class="producten">
+    @foreach (Product p in Model)
+    {
+        <div class="product">
+            <img src="@p.Img" />
+            <p>@p.Naam : €@p.Prijs</p>
+            <p><a href="/Product/@p.id" class="lees"> Lees meer... </a></p>
         </div>
-</body>
-
-<script type="text/javascript">
-
-        function swapStyle(sheet){
-            document.getElementById('mystylesheet').href = sheet
-        }
-
-</script>
-
+    }
+</div>

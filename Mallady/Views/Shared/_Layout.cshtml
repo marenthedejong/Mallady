@@ -2,64 +2,94 @@
 
 <html lang="en">
 
-  <head>
-    <link rel = "stylesheet" href = "~/css/site.css" />
+<head>
+    <link rel="stylesheet" href="~/css/site.css" />
     <link rel='shortcut icon' type='img/png' href='img/logo Mallady.png'>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     @RenderSection("style", false)
-  </head>
-  
-  <header>
-    
-    <a href="/"><img src="/img/logo Mallady.png" width = "180" height = "160"> </a>
+</head>
 
-     <div class = "navigatie"> 
+<body>
+
+    <header>
+        <a class="logo" href="/"><img src="/img/logo Mallady.png" width="180" height="160"></a>
+
         <nav>
-            <div class="nav-links">
-                <ul>
-                    <li><a href="/">Home</a> </li>
-                    <li><a href="/Menu">Menukaart</a> </li>
-                    <li> <a href="/Bestelpagina">Bestelpagina</a> </li>
-                    <li> <a href="/Vestigingen">Vestigingen</a> </li>
-                    <li> <a href="/Contact">Contact</a> </li>
-                    <li> <a href="/Login">Login</a> </li>
-                    <li> <a href="/Reserveren">Reserveren</a> </li>
-                </ul>
-            </div>
+            <a href="/">Home</a>
+            <a href="/Menu">Menukaart</a>
+            <a href="/Bestelpagina">Bestelpagina</a>
+            <a href="/Vestigingen">Vestigingen</a>
+            <a href="/Contact">Contact</a>
+            <a href="/Login">Login</a>
+            <a href="/Reserveren">Reserveren</a>
         </nav>
-     </div>
 
-  </header>
+        @*<div class="navigatie">
+            <nav>
+            <div class="nav-links">
+            <ul>
+            <li><a href="/">Home</a> </li>
+            <li><a href="/Menu">Menukaart</a> </li>
+            <li> <a href="/Bestelpagina">Bestelpagina</a> </li>
+            <li> <a href="/Vestigingen">Vestigingen</a> </li>
+            <li> <a href="/Contact">Contact</a> </li>
+            <li> <a href="/Login">Login</a> </li>
+            <li> <a href="/Reserveren">Reserveren</a> </li>
+            </ul>
+            </div>
+            </nav>
+            </div>*@
 
-  <body>
-   @RenderBody()
-   
-  </body>
+    </header>
 
-  <footer>
+    @* <div class="knopjes">
+        <div class="box">
+        <a onclick="swapStyle('/css/site.css')">Dagmodus</a>
+        </div>
 
-    <div class="ftekst">
-      <p> Vind ons op social media! </p>
-    </div>
-    
-       <div class ="socials">
+        <div class="box">
+        <a onclick="swapStyle('/css/Donkersite.css')">Nachtmodus</a>
+        </div>
+        </div>*@
 
-             <div class="socialmedia">
-               <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ'">
-               <img src='/img/instagram.jpg' width = "80" height = "80" /></a> 
-             </div>
+
+    @RenderBody()
+
+    <footer>
+        <div class="ftekst">
+            <p> Vind ons op social media! </p>
+        </div>
+
+        <div class="socials">
 
             <div class="socialmedia">
-              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ'">
-              <img src= '/img/facebook.png' width = "80" height = "80" /></a> 
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ'">
+                    <img src='/img/instagram.jpg' width="80" height="80" />
+                </a>
             </div>
 
-            <div class="socialmedia"> 
-              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ'">
-              <img src = '/img/Snapchat.png' width = "80" height = "80" /></a> 
-           </div>
-   
-     </div> 
-    
-  </footer>
+            <div class="socialmedia">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ'">
+                    <img src='/img/facebook.png' width="80" height="80" />
+                </a>
+            </div>
 
+            <div class="socialmedia">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ'">
+                    <img src='/img/Snapchat.png' width="80" height="80" />
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        function swapStyle(sheet){
+            document.getElementById('mystylesheet').href = sheet
+        }
+    </script>
+
+
+</body>
 </html>

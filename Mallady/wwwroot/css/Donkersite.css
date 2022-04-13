@@ -1,5 +1,5 @@
 ﻿header {
-    background: #F0FBFF;
+    background: gray;
     display: flex;
     align-items: center;
     height: 100px;
@@ -23,15 +23,15 @@
     font-family: 'Poppins', sans-serif, 'arial';
 }
 
-    .nav-links ul li a {
-        text-decoration: none;
-        display: block;
-        color: #183052;
-    }
+.nav-links ul li a {
+    text-decoration: none;
+    display: block;
+    color: white;
+}
 
-        .nav-links ul li a:hover {
-            background-color: #b7dfed;
-        }
+.nav-links ul li a:hover {
+    background-color: #b7dfed;
+}
 
 ul li ul li {
     display: none;
@@ -42,51 +42,39 @@ ul li:hover ul li {
 }
 
 nav {
-    height: 128px;
-    background: #F0FBFF;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    padding-left: 200px;
-    align-items: center;
-}
-
-.logo {
     position: absolute;
-    left: 0;
-    top: 0;
-}
-
-nav a {
-    text-decoration: none;
+    top: 25px;
+    left: 160px;
+    height: 60px;
+    background: gray;
 }
 
 body {
-    background: #8EC2ED;
+    background: black;
     width: 100%;
     left: 0;
     right: 0;
     margin: 0;
 }
 
-.Titel h1 {
+.Titel h1{
     font-size: 40px;
     text-align: center;
-    color: #183052;
+    color: white;
 }
 
 .bestelknop {
     display: flex;
     justify-content: center;
     padding: 10px;
-    margin-top: 0;
+    margin-top:0; 
 }
 
-    .bestelknop p {
-        margin-top: 15px;
-    }
+.bestelknop p{
+    margin-top: 15px;
+}
 
-    .bestelknop a:link, a:visited {
+.bestelknop a:link, a:visited {
         background-color: #FFC67F;
         color: #183052;
         padding: 14px 25px;
@@ -96,12 +84,12 @@ body {
         height: 60px;
         font-size: 25px;
         margin-top: 5px;
-    }
+}
+    
 
-
-    .bestelknop a:hover, a:active {
-        background-color: white;
-    }
+.bestelknop a:hover, a:active {
+    background-color: white;
+}
 
 .Homepage_img {
     margin-bottom: 0;
@@ -120,7 +108,7 @@ footer {
     color: #183052;
 }
 
-.ftekst {
+.ftekst{
     font-size: 25px;
     color: #183052;
 }
