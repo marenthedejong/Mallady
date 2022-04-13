@@ -1,4 +1,18 @@
-﻿.Menu_tekst {
+﻿.box {
+    display: flex;
+    padding: 10px;
+    margin-top: 25px;
+    background: #FFC67F;
+    margin-left: 20px;
+    width: 6%;
+}
+
+.box a {
+     color: #183052;
+     font-size: 20px;
+ }
+
+.Menu_tekst {
     text-align: center;
     color: #183052;
     
