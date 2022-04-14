@@ -17,21 +17,23 @@
     </div>
 </div>
 
-<div class = "tekst22"> 
-    <h1>Vestigingen</h1>
-    <p>Kom gezellig langs in één van onze vestigingen!</p>
-</div>
+<div class = "body">
+    <div class = "tekst22"> 
+        <h1>Vestigingen</h1>
+        <p>Kom gezellig langs in één van onze vestigingen!</p>
+    </div>
 
-<div class = "container">
-        @foreach (Restaurant r in Model)
-        {
-            <div class = "restauranttekst" >
-               <h2>@r.Locatie</h2>
-                <p>@r.Adres</p>
-            </div>
-        }
-</div>
+    <div class = "container">
+            @foreach (Restaurant r in Model)
+            {
+                <div class = "restauranttekst" >
+                   <h2>@r.Locatie</h2>
+                    <p>@r.Adres</p>
+                </div>
+            }
+    </div>
 
-<div class = "reserveerknop">
-        <a href="/Reserveren"><p>Reserveren</p></a>
-</div>
+    <div class = "reserveerknop">
+            <a href="/Reserveren"><p>Reserveren</p></a>
+    </div>
+ </div>

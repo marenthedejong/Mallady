@@ -90,3 +90,13 @@ body {
 footer {
     position: fixed;
 }
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .body {
+        padding: 180px;
+    }
+}
