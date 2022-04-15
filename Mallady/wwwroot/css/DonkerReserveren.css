@@ -62,7 +62,14 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
     .styled-input {
         width: 100%;
     }
+
+    .content {
+        padding-bottom: 180px;
+    }
+
 }
+
+
 
 .styled-input label {
     color: #999;

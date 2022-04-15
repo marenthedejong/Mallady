@@ -19,56 +19,59 @@
     </div>
 </div>
 
+<div class = "content">
 
-<div class = "Tekst">
-    <h1>Reserveren</h1>
-    <p>Hier kunt u een reservering maken voor in één van onze restaurants!</p>
-    <p>Gelieve de datum in te vullen als: yy - mm - dd en de tijd in een vorm als hour:mins:sec. Voor onze locaties kunt u Amersfoort, Amsterdam of Den Haag invullen.</p>
-</div>
+    <div class = "Tekst">
+        <h1>Reserveren</h1>
+        <p>Hier kunt u een reservering maken voor in één van onze restaurants!</p>
+        <p>Gelieve de datum in te vullen als: yy - mm - dd en de tijd in een vorm als hour:mins:sec. Voor onze locaties kunt u Amersfoort, Amsterdam of Den Haag invullen.</p>
+    </div>
 
-<div class="container">
+    <div class="container">
 
-    <form method="post" class="row input-container">
-        <div class="col-md-6 col-sm-12">
-            <div class="styled-input wide">
-                <input placeholder="Locatie" type="text" name="Locatie" />
-                 @Html.ValidationMessageFor(m => m.Locatie)
+        <form method="post" class="row input-container">
+            <div class="col-md-6 col-sm-12">
+                <div class="styled-input wide">
+                    <input placeholder="Locatie" type="text" name="Locatie" />
+                     @Html.ValidationMessageFor(m => m.Locatie)
+                </div>
             </div>
-        </div>
 
-        <div class="names">
+            <div class="names">
 
-        <div class="col-md-6 col-sm-12">
-            <div class="styled-input">
-                <input placeholder="Voornaam" type="text" name="Voornaam" />
-                @Html.ValidationMessageFor(m => m.Voornaam)
+            <div class="col-md-6 col-sm-12">
+                <div class="styled-input">
+                    <input placeholder="Voornaam" type="text" name="Voornaam" />
+                    @Html.ValidationMessageFor(m => m.Voornaam)
+                </div>
             </div>
-        </div>
 
-        <div class="col-md-6 col-sm-12">
-            <div class="styled-input" style="float:right;">
-                <input placeholder="Achternaam" type="text" name="Achternaam" />
-                @Html.ValidationMessageFor(m => m.Achternaam)
+            <div class="col-md-6 col-sm-12">
+                <div class="styled-input" style="float:right;">
+                    <input placeholder="Achternaam" type="text" name="Achternaam" />
+                    @Html.ValidationMessageFor(m => m.Achternaam)
+                </div>
             </div>
-        </div>
-        </div>
-
-        <div class="col-md-6 col-sm-12">
-            <div class="styled-input wide">
-                <input placeholder="Aantal Personen" type="text" name="Personen" />
-                 @Html.ValidationMessageFor(m => m.Personen)
             </div>
-        </div>
 
-         <div class="col-md-6 col-sm-12">
-            <div class="styled-input wide">
-                <input placeholder="Datum en Tijd" type="text" name="Datumtijd" />
-                 @Html.ValidationMessageFor(m => m.Datumtijd)
+            <div class="col-md-6 col-sm-12">
+                <div class="styled-input wide">
+                    <input placeholder="Aantal Personen" type="text" name="Personen" />
+                     @Html.ValidationMessageFor(m => m.Personen)
+                </div>
             </div>
-        </div>
 
-        <div class="col-xs-12">
-            <input class="btn-lrg submit-btn" type="submit" value="verstuur" />
-        </div>
-    </form>
+             <div class="col-md-6 col-sm-12">
+                <div class="styled-input wide">
+                    <input placeholder="Datum en Tijd" type="text" name="Datumtijd" />
+                     @Html.ValidationMessageFor(m => m.Datumtijd)
+                </div>
+            </div>
+
+            <div class="col-xs-12">
+                <input class="btn-lrg submit-btn" type="submit" value="verstuur" />
+            </div>
+        </form>
+    </div>
+
 </div>
