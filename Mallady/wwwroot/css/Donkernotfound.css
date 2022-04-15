@@ -24,11 +24,11 @@ h1 {
     color: white;
 }
 
-a{
+.Tekst a{
     text-decoration: none;
 }
 
-p {
+.Tekst p {
     font-size: 25px;
     text-align: center;
     color: white;
